@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-toggler {
+    display: none;
+}
+/* Navbar Toggler Styles */
+.navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 15px 0 0 15px; /* Rounded left corners */
+}
+
+.open {
+    width: 250px;
+}
+
+.sidebar-header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 15px 0 0 0; /* Rounded top left corner */
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 15px 0 0 15px; /* Rounded left corners */
+}
+
+.sidebar-header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 15px 0 0 0; /* Rounded top left corner */
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navigation-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-links li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc; /* Add border between items */
+}
+
+.navigation-links li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.navigation-links a:hover {
+    background-color: #ddd; /* Change background color on hover */
+}
+
+/* Chat Box Styles */
+.chat-box {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.chat-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.chat-header h3 {
+    margin: 0;
+}
+
+.chat-history {
+    padding: 20px;
+}
+
+.user-message {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 10px 15px;
+    max-width: 70%;
+    margin-bottom: 10px;
+    align-self: flex-end;
+}
+
+.assistant-message {
+    background-color: #0084FF;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    max-width: 70%;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0084FF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Sound Styles */
+.sound {
+    margin-bottom: 20px;
+}
+
+.sound-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.play-button {
+    font-size: 24px;
+    background-color: #0084FF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sound Info Styles */
+.sound-info {
+    padding: 10px;
+}
+
+.sound-info h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.sound-info p {
+    margin: 0;
+    color: #666;
+}
+
+/* Sound Image Container Styles */
+.sound-image-container {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-bottom: 10px; /* Add some space between image and info */
+}
