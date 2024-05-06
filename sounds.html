@@ -14,7 +14,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="#" class="logo">Somnus</a>
+        <a href="index.html" class="logo">Somnus</a>
     </div>
 
     <!-- Sidebar -->
@@ -25,11 +25,9 @@
         </div>
         <ul class="navigation-links">
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="sounds.html">Sounds</a></li>
-            <li><a href="ejercicios.html">Ejercicios</a></li>
-            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="exercises.html">Ejercicios</a></li>
+            <li><a href="calculator.html">Calculadora</a></li>
         </ul>
     </div>
 
@@ -43,6 +41,18 @@
             <div class="sound-info">
                 <h2>Ocean Waves</h2>
                 <p>Calming sounds of ocean waves</p>
+            </div>
+            <audio src="ocean.mp3" preload="auto"></audio>
+            <button class="play-button" onclick="toggleSound(this)">▶️</button>
+        </div>
+
+        <div class="sound">
+            <div class="sound-image-container">
+                <img src="/images/rain-icon.png" alt="Ocean" class="sound-image">
+            </div>
+            <div class="sound-info">
+                <h2>Falling rain</h2>
+                <p>Calming sounds of falling raing</p>
             </div>
             <audio src="ocean.mp3" preload="auto"></audio>
             <button class="play-button" onclick="toggleSound(this)">▶️</button>

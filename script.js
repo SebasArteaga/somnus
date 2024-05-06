@@ -46,3 +46,64 @@ function processUserInput(input) {
     // For demonstration, let's just echo back the user's input
     addAssistantMessage("You said: " + input);
 }
+
+// Toggle Exercise Details Function
+function toggleDetails(button) {
+    var exerciseDetails = button.nextElementSibling;
+    if (exerciseDetails.style.display === "none" || exerciseDetails.style.display === "") {
+        exerciseDetails.style.display = "block";
+        button.innerText = "Show less";
+    } else {
+        exerciseDetails.style.display = "none";
+        button.innerText = "Show more";
+    }
+}
+
+// Sleep Calculator Function
+function calculateSleep() {
+    var wakeTime = document.getElementById("wake-time").value;
+    var currentTime = new Date();
+    var wakeHour = parseInt(wakeTime.split(":")[0]);
+    var wakeMinute = parseInt(wakeTime.split(":")[1]);
+    var wakeDate = new Date();
+    
+    if (wakeHour < currentTime.getHours() || (wakeHour === currentTime.getHours() && wakeMinute <= currentTime.getMinutes())) {
+        wakeDate.setDate(currentTime.getDate() + 1);
+    }
+    
+    wakeDate.setHours(wakeHour);
+    wakeDate.setMinutes(wakeMinute);
+
+    var sleepTimes = calculateSleepTimes(wakeDate);
+
+    var resultHTML = "<h2>Suggested Sleep Times</h2>";
+
+    sleepTimes.reverse().forEach(function(time, index) {
+        resultHTML += "<p>Option " + (index + 1) + ": " + formatTime(time.getHours(), time.getMinutes()) + "</p>";
+    });
+
+    document.getElementById("result").innerHTML = resultHTML;
+}
+
+// Calculate Sleep Times Function
+function calculateSleepTimes(wakeDate) {
+    var sleepTimes = [];
+
+    // Calculate suggested sleep times for 3 to 7 sleep cycles
+    for (var i = 3; i <= 7; i++) {
+        var sleepTime = new Date(wakeDate.getTime() - (i * 90 * 60000)); // Subtract 90 minutes for each sleep cycle
+        sleepTimes.push(sleepTime);
+    }
+
+    return sleepTimes;
+}
+// Format Time Function
+function formatTime(hour, minute) {
+    var ampm = hour >= 12 ? 'PM' : 'AM';
+    hour = hour % 12;
+    hour = hour ? hour : 12; // Handle midnight (00:00)
+    minute = minute < 10 ? '0' + minute : minute;
+    return hour + ':' + minute + ' ' + ampm;
+}
+
+
