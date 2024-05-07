@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relaxing Sounds Library</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <div class="navbar">
@@ -14,7 +16,12 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="index.html" class="logo">Somnus</a>
+
+        <a href="index.html" class="logo">
+            <div class="logo">
+                <img src="/images/somnus-logo.png" alt="Somnus Logo">
+            </div>
+        </a>
     </div>
 
     <!-- Sidebar -->
@@ -24,42 +31,78 @@
             <div class="close-btn" onclick="toggleSidebar()">&times;</div>
         </div>
         <ul class="navigation-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="sounds.html">Sounds</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="sounds.html">Sonidos</a></li>
             <li><a href="exercises.html">Ejercicios</a></li>
             <li><a href="calculator.html">Calculadora</a></li>
         </ul>
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <h1>Relaxing Sounds Library</h1>
-        <div class="sound">
-            <div class="sound-image-container">
-                <img src="/images/ocean-icon.png" alt="Ocean" class="sound-image">
-            </div>
-            <div class="sound-info">
-                <h2>Ocean Waves</h2>
-                <p>Calming sounds of ocean waves</p>
-            </div>
-            <audio src="ocean.mp3" preload="auto"></audio>
-            <button class="play-button" onclick="toggleSound(this)">▶️</button>
-        </div>
 
-        <div class="sound">
-            <div class="sound-image-container">
-                <img src="/images/rain-icon.png" alt="Ocean" class="sound-image">
-            </div>
-            <div class="sound-info">
-                <h2>Falling rain</h2>
-                <p>Calming sounds of falling raing</p>
-            </div>
-            <audio src="ocean.mp3" preload="auto"></audio>
-            <button class="play-button" onclick="toggleSound(this)">▶️</button>
+    <div class="audio-container ocean">
+        <h1>Olas del óceano</h1>
+        <div class="sound-image-container">
+            <img src="/images/ocean-waves-banner.webp" alt="Ocean" class="sound-image">
         </div>
-        <!-- Add more sound elements here -->
+        <audio id="audio-player" controls loop>
+            <source src="/sounds/ocean-waves.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
+
+    <div class="audio-container white">
+        <h1>Ruido blanco</h1>
+        <div class="sound-image-container">
+            <img src="/images/white-noise-banner.webp" alt="WhiteNoise" class="sound-image">
+        </div>
+        <audio id="audio-player" controls loop>
+            <source src="/sounds/white-noise.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+
+    <div class="audio-container brown">
+        <h1>Ruido café</h1>
+        <div class="sound-image-container">
+            <img src="/images/brown-noise-banner.webp" alt="Brown noise" class="sound-image">
+        </div>
+        <audio id="audio-player" controls loop>
+            <source src="/sounds/brown-noise.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+
+    <div class="audio-container rain">
+        <h1>Tormenta</h1>
+        <div class="sound-image-container">
+            <img src="/images/rain-banner.webp" alt="Rain" class="sound-image">
+        </div>
+        <audio id="audio-player" controls loop>
+            <source src="/sounds/rain-thunder.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+
+    <div class="audio-container fan">
+        <h1>Ventilador</h1>
+        <div class="sound-image-container">
+            <img src="/images/fan-banner.webp" alt="Fan" class="sound-image">
+        </div>
+        <audio id="audio-player" controls loop>
+            <source src="/sounds/fan-noise.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <!-- Add more sound elements here -->
+
+    <script src="sounds.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

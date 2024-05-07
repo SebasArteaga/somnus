@@ -76,10 +76,10 @@ function calculateSleep() {
 
     var sleepTimes = calculateSleepTimes(wakeDate);
 
-    var resultHTML = "<h2>Suggested Sleep Times</h2>";
+    var resultHTML = "<h2>Horas sugeridas para dormir</h2>";
 
     sleepTimes.reverse().forEach(function(time, index) {
-        resultHTML += "<p>Option " + (index + 1) + ": " + formatTime(time.getHours(), time.getMinutes()) + "</p>";
+        resultHTML += "<p>Opción " + (index + 1) + ": " + formatTime(time.getHours(), time.getMinutes()) + "</p>";
     });
 
     document.getElementById("result").innerHTML = resultHTML;

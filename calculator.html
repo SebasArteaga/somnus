@@ -16,7 +16,10 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="index.html" class="logo">Somnus</a>
+         
+        <a href="index.html" class="logo"><div class="logo">
+            <img src="/images/somnus-logo.png" alt="Somnus Logo" >
+        </div></a>
     </div>
 
     <!-- Sidebar -->
@@ -26,9 +29,9 @@
             <div class="close-btn" onclick="toggleSidebar()">&times;</div>
         </div>
         <ul class="navigation-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="sounds.html">Sounds</a></li>
-            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="sounds.html">Sonidos</a></li>
+            <li><a href="exercises.html">Ejercicios</a></li>
             <li><a href="calculator.html">Calculadora</a></li>
         </ul>
     </div>
@@ -36,10 +39,10 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="calculator">
-            <h1>Sleep Calculator</h1>
-            <p>Enter the time you want to wake up:</p>
+            <h1>Calculadora de sueño</h1>
+            <p>Introduce la hora a la que quieres despertar:</p>
             <input type="time" id="wake-time">
-            <button onclick="calculateSleep()">Calculate</button>
+            <button onclick="calculateSleep()">Calcular</button>
             <div id="result"></div>
         </div>
     </div>

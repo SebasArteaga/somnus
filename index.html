@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somnus</title>
     <link rel="stylesheet" href="styles.css">
+    
+
 </head>
 <body>
     <div class="navbar">
@@ -13,7 +15,10 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <a href="#" class="logo">Somnus</a>
+         
+        <a href="index.html" class="logo"><div class="logo">
+            <img src="/images/somnus-logo.png" alt="Somnus Logo" >
+        </div></a>
     </div>
 
     <div id="sidebar" class="sidebar">
@@ -23,27 +28,19 @@
         </div>
         <ul class="navigation-links">
             <li><a href="about.html">Acerca de</a></li>
-            <li><a href="sounds.html">Sounds</a></li>
+            <li><a href="sounds.html">Sonidos</a></li>
             <li><a href="exercises.html">Ejercicios</a></li>
             <li><a href="calculator.html">Calculadora</a></li>
         </ul>
     </div>
 
-    <div class="main-content">
-        <h1>Welcome to Somnus</h1>
-        <div class="chat-box">
-            <div class="chat-header">
-                <img src="/images/somnus-logo.png" alt="Chat Icon">
-                <h3>Navigator Assistant</h3>
-            </div>
-            <div class="chat-history" id="chat-history">
-                <!-- Chat history will be displayed here -->
-            </div>
-            <div class="chat-input">
-                <input type="text" id="user-input" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
+    <div class="main-content-head">
+        <h1>Bienvenido a Somnus</h1>
+        <h2>Prueba nuestro chatbot especializado</h2>
+     
+    </div>
+    <div class="iframe">
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/7c70d8bf-92f7-49d2-81b8-40a76ae4aa16"></iframe>
     </div>
 
     <script src="script.js"></script>
